@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taha Builders</title>
+<meta name="description" content="Taha Builders — dredging and marine solutions. Capital and maintenance dredging, land reclamation, marine and civil construction in Bangladesh.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="images/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="images/favicon-180.png">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="Taha Builders home">
+      <img class="mark" src="images/logo-mark.svg" alt="" width="46" height="46">
+      <span class="wordmark">TAHA BUILDERS<span class="tag">Dredging &amp; Construction</span></span>
+    </a>
+
+    <ul class="nav">
+      <li><a class="top" href="#" aria-current="page">Home</a></li>
+      <li><a class="top" href="#activities">Core Activities</a></li>
+      <li><a class="top" href="fleet.html">Our Fleet</a></li>
+      <li><a class="top" href="#projects">Projects
+        <svg class="caret" viewBox="0 0 10 10"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg></a>
+        <ul class="drop">
+          <li><a href="#projects">Completed Projects</a></li>
+          <li><a href="#ongoing">On-going Projects</a></li>
+        </ul>
+      </li>
+      <li><a class="top" href="#">Company
+        <svg class="caret" viewBox="0 0 10 10"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg></a>
+        <ul class="drop">
+          <li><a href="about.html">About Us</a></li><li><a href="#">Leadership</a></li>
+          <li><a href="certifications.html">Licences</a></li>
+          <li><a href="#">HSE &amp; Quality</a></li>
+          <li><a href="#">Sustainability</a></li>
+        </ul>
+      </li>
+      <li><a class="top" href="#">Contact Us</a></li>
+    </ul>
+
+    <div class="icons">
+      <a href="#" aria-label="Client portal"><svg width="19" height="19" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="7" r="3.2"></circle><path d="M3.5 17c1.1-3.2 3.5-4.8 6.5-4.8s5.4 1.6 6.5 4.8"></path></svg></a>
+      <a href="#" aria-label="LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21H17.6v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.46-2.2 2.97V21H9z"></path></svg></a>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="mobile" id="mobileNav" aria-label="Mobile"></nav>
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero" aria-roledescription="carousel" aria-label="Operations">
+  <div id="slides"></div>
+
+  <div class="hero-copy">
+    <div class="wrap">
+      <p class="hero-eyebrow" id="heroEyebrow"></p>
+      <h1 id="heroTitle"></h1>
+      <p class="sub" id="heroSub"></p>
+    </div>
+  </div>
+
+  <div class="dots" role="tablist" aria-label="Hero slides" id="heroDots"></div>
+
+  <a class="scroll-cue" href="#activities" aria-label="Scroll down">
+    <svg width="26" height="34" viewBox="0 0 26 34" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 3v27M5 22l8 8 8-8"></path></svg>
+  </a>
+</section>
+
+<!-- ============ 2. OUR CORE ACTIVITIES ============ -->
+<section class="section" id="activities">
+  <div class="wrap">
+    <div class="center-head">
+      <h2>Our Core Activities</h2>
+      <p class="sub">Reliable, scalable, and environmentally responsible marine engineering services across Bangladesh.</p>
+    </div>
+
+    <div class="carousel">
+      <button class="c-nav prev" id="actPrev" aria-label="Previous">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2L4 8l6 6"></path></svg>
+      </button>
+      <div class="viewport"><div class="track" id="actTrack"></div></div>
+      <button class="c-nav next" id="actNext" aria-label="Next">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2l6 6-6 6"></path></svg>
+      </button>
+    </div>
+
+    <div class="c-dots" id="actDots" role="tablist" aria-label="Activities"></div>
+    <div class="pill-row"><a class="pill" href="#">Explore our services</a></div>
+  </div>
+</section>
+
+<!-- ============ 3. EXECUTIVE LEADERSHIP ============ -->
+<section class="section" id="leadership" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="center-head">
+      <h2>Executive Leadership</h2>
+      <p class="sub">Experienced leadership driving innovation, excellence, and sustainable growth across Bangladesh&rsquo;s marine and infrastructure sectors.</p>
+    </div>
+    <div class="leaders" id="leaderGrid"></div>
+  </div>
+</section>
+
+<!-- ============ 4. COMPLETED PROJECTS ============ -->
+<section class="section" id="projects" style="background:#F4F7F9">
+  <div class="wrap">
+    <div class="center-head">
+      <h2>Completed Projects</h2>
+      <p class="sub">Successfully delivered a diverse portfolio of projects with high standards of quality, safety, and client satisfaction.</p>
+    </div>
+    <div class="projects" id="projGrid"></div>
+    <div class="more-row" id="moreRow" hidden>
+      <button class="more-btn" id="moreBtn" type="button">
+        See more projects
+        <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 5l5 5 5-5"></path></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. ON-GOING PROJECTS ============ -->
+<section class="section" id="ongoing">
+  <div class="wrap">
+    <div class="center-head">
+      <h2>On-going Projects</h2>
+      <p class="sub">Work currently on site.</p>
+    </div>
+    <div class="projects three" id="liveGrid"></div>
+  </div>
+</section>
+
+<!-- ============ 6. WORKING PARTNERS ============ -->
+<section class="section partners" id="partners" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="center-head">
+      <h2>Working Partners</h2>
+      <p class="sub">Collaborating for a stronger Bangladesh.</p>
+    </div>
+
+    <div class="p-rail"><div class="p-track" id="pTrack"></div></div>
+  </div>
+</section>
+
+<!-- ============ PROJECT MODAL ============ -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="backdrop" data-close></div>
+  <div class="sheet">
+    <div class="sheet-top">
+      <span class="k">Completed Project</span>
+      <button class="x" data-close aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l10 10M13 3L3 13"></path></svg>
+      </button>
+    </div>
+    <div class="sheet-body">
+      <h2 id="mTitle"></h2>
+      <div class="factbar" id="mFacts"></div>
+      <p class="lede" id="mLede"></p>
+      <div class="sub-h">Project photographs</div>
+      <div class="gallery" id="mGallery"></div>
+      <div id="mDocsWrap">
+        <div class="sub-h">Project documents</div>
+        <div class="docs" id="mDocs"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="images/logo-mark-reversed.svg" alt="" width="54" height="54" style="margin-bottom:18px">
+        <span class="wordmark">TAHA BUILDERS<span class="tag">Dredging &amp; Construction</span></span>
+        <p><span data-slot>One-line description of Taha Builders, to be supplied.</span></p>
+      </div>
+      <div><h4>Core Activities</h4><ul id="footActs"></ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="about.html">About Us</a></li><li><a href="#">Leadership</a></li>
+        <li><a href="certifications.html">Licences</a></li><li><a href="#">HSE &amp; Quality</a></li>
+        <li><a href="#">Sustainability</a></li></ul></div>
+      <div><h4>Connect</h4><ul>
+        <li><a href="#projects">Completed Projects</a></li><li><a href="#ongoing">On-going Projects</a></li>
+        <li><a href="fleet.html">Our Fleet</a></li><li><a href="#">Newsroom</a></li>
+        <li><a href="#">Careers</a></li><li><a href="#">Contact Us</a></li></ul></div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; <span data-slot>YEAR</span> <span data-slot>REGISTERED COMPANY NAME</span>. All rights reserved.</span>
+      <span>Privacy Policy &nbsp;&middot;&nbsp; Terms</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* =================================================================
+   CONTENT — edit these three arrays and the page updates itself.
+   ================================================================= */
+
+/* ---- 1. HERO: five clips ---- */
+var HERO = [
+  {file:'videos/01-capital-dredging.mp4', still:'images/hero/01.jpg', eyebrow:'Capital Dredging',
+   title:'Deeper channels, wider berths, ports that keep working.',
+   sub:'Cutter suction fleets cutting design profile to survey tolerance, on schedule and to specification.'},
+  {file:'videos/02-sand-filling.mp4', still:'images/hero/02.jpg', eyebrow:'Sand Filling',
+   title:'New ground, placed metre by metre.',
+   sub:'Hydraulic fill discharged to level and compacted, turning water into platform.'},
+  {file:'videos/03-maintenance.mp4', still:'images/hero/03.jpg', eyebrow:'Maintenance Dredging',
+   title:'Declared depths, held through the season.',
+   sub:'Siltation removed on a survey-verified cycle so berths stay open.'},
+  {file:'videos/04-reclamation.mp4', still:'images/hero/04.jpg', eyebrow:'Land Reclamation',
+   title:'Coastline built to a design, not a guess.',
+   sub:'Reclamation areas bunded, filled and surcharged with settlement monitored to handover.'},
+  {file:'videos/05-shore-protection.mp4', still:'images/hero/05.jpg', eyebrow:'Shore Protection',
+   title:'Protection that outlasts the storm season.',
+   sub:'Graded armour placed to profile for breakwaters, revetments and scour protection.'}
+];
+
+/* ---- 2. CORE ACTIVITIES: the 13, in order ---- */
+var ACTIVITIES = [
+  'Capital Dredging',
+  'Offshore Pipeline Trenching',
+  'Maintenance Dredging',
+  'River Dredging for River Navigational Channels',
+  'Land Reclamation',
+  'Sand Mining',
+  'Intake and Outfall Channels',
+  'Desiltation of Lakes, Ponds and Barrages',
+  'Irrigation Canal Dredging',
+  'Fishing Harbour Construction',
+  'Quays and Jetties',
+  'Breakwaters',
+  'Shore Protection'
+];
+
+/* ---- 3. COMPLETED PROJECTS: twelve ----
+   Replace title / client / location / year / scope / lede.
+   gallery: image paths.  docs: {name, size, file}.  docs: [] hides
+   the documents block for that project.
+
+   TEMPORARY: covers and galleries currently borrow the Core Activities
+   photographs so the grid reads properly. Change each 'cover' to
+   'images/projects/NN.jpg' and each gallery entry to
+   'images/projects/NN-a.jpg' etc. once the real project photos exist. */
+function actImg(n){ n = ((n - 1) % 13) + 1; return 'images/activities/' + (n < 10 ? '0'+n : n) + '.jpg'; }
+
+var PROJECTS = [
+ {cover:'images/projects/01.jpg',
+  title:'Marine Drive Road Project, Cox\u2019s Bazar',
+  client:'To be confirmed', value:'To be confirmed', period:'Completed', ref:'To be confirmed',
+  lede:'Marine Drive road works at Cox\u2019s Bazar.',
+  gallery:['images/projects/01-a.jpg','images/projects/01-old.jpg'], docs:[]},
+
+ {cover:'images/projects/02.jpg',
+  title:'Excavation and Land Filling, Submarine Project, Pekua, Cox\u2019s Bazar',
+  client:'To be confirmed', value:'Tk 145 crore', period:'Completed', ref:'To be confirmed',
+  lede:'Sub marine project at Pekua Magnama.',
+  gallery:['images/projects/02-a.jpg','images/projects/02-old.jpg'], docs:[]},
+
+ {cover:'images/projects/03.jpg',
+  title:'Ramu Cantonment Road Project',
+  client:'To be confirmed', value:'Tk 185 crore', period:'Completed', ref:'To be confirmed',
+  method:'Land excavation and sand filling',
+  lede:'Land excavation and sand filling works for the Ramu Cantonment road project.',
+  gallery:['images/projects/03-a.jpg','images/projects/03-b.jpg'], docs:[]},
+
+ {cover:'images/projects/04.jpg',
+  title:'Maintenance Dredging, Karnaphuli River',
+  client:'To be confirmed', value:'To be confirmed', period:'Completed', ref:'To be confirmed',
+  method:'20 inch cutter suction dredger',
+  lede:'Maintenance dredging on the Karnaphuli River, carried out with a 20 inch cutter suction dredger.',
+  gallery:['images/projects/04-a.jpg','images/projects/04-old.jpg'], docs:[]},
+
+ {cover:'images/projects/05.jpg',
+  title:'Maintenance Dredging in Front of Marine Academy Jetty',
+  client:'To be confirmed', value:'To be confirmed', period:'Completed', ref:'To be confirmed',
+  method:'Grab dredging',
+  lede:'Maintenance dredging on the Karnaphuli River in front of the Marine Academy jetty, carried out as grab dredging work.',
+  gallery:['images/projects/05-a.jpg'], docs:[]},
+
+ {cover:'images/projects/06.jpg',
+  title:'Maintenance Dredging, Opposite CCT and NCT Jetties',
+  client:'To be confirmed', value:'To be confirmed', period:'Completed', ref:'To be confirmed',
+  method:'Load, unload and bulkhead',
+  lede:'Maintenance dredging on the Karnaphuli River opposite the CCT and NCT jetties, worked by load, unload and bulkhead.',
+  gallery:['images/projects/06-a.jpg','images/projects/06-old.jpg','images/projects/06-b.jpg'], docs:[]},
+
+ {cover:'images/projects/07.jpg',
+  title:'20 km Embankment Construction, Cox\u2019s Bazar',
+  client:'Bangladesh Water Development Board', value:'To be confirmed', period:'Completed', ref:'To be confirmed',
+  method:'Embankment construction, 20 km',
+  lede:'Construction of 20 kilometres of embankment under the Bangladesh Water Development Board at Cox\u2019s Bazar.',
+  gallery:['images/projects/07-a.jpg','images/projects/07-old.jpg'], docs:[]},
+
+ {cover:'images/projects/08.jpg',
+  title:'Mirsarai Economic Zone Sand Filling, 6 km, Zones 11, 12, 13 and 17',
+  client:'To be confirmed', value:'To be confirmed', period:'Completed', ref:'To be confirmed',
+  method:'Sand filling, 30 crore cft',
+  lede:'Sand filling works at the Mirsarai Economic Zone across zones 11, 12, 13 and 17, over a 6 kilometre run. Sand placed: 30 crore cft.',
+  gallery:['images/projects/08-a.jpg','images/projects/08-old.jpg'], docs:[]},
+
+ {cover:'images/projects/18.jpg',
+  title:'Border Road, Khagrachari',
+  client:'To be confirmed', value:'To be confirmed', period:'Completed', ref:'To be confirmed',
+  lede:'Border road construction at Khagrachari.',
+  gallery:['images/projects/18-a.jpg'], docs:[]},
+
+ {cover:'images/projects/19.jpg',
+  title:'Marine Drive Protective Work, Tetrapod',
+  client:'To be confirmed', value:'To be confirmed', period:'Completed', ref:'To be confirmed',
+  method:'Tetrapod armour over geotextile tube',
+  lede:'Shore protection along the Marine Drive frontage, tetrapod armour placed over a geotextile tube core.',
+  gallery:['images/projects/19-a.jpg'], docs:[]}
+];
+
+/* ---- projects 9 to 17, from the company profile ---- */
+PROJECTS.push(
+ {cover:'images/projects/09.jpg',
+  title:'S.S. Power Plant Land Development, Gandamara, Banshkhali',
+  client:'S.S. Power Plant, S. Alam Group',
+  value:'Tk 218.61 crore  (Tk 218,61,20,000)',
+  period:'Completed', ref:'Work order, 70,52,000 CM at Tk 310.00 per CM',
+  method:'Land development, 7,052,000 m\u00b3',
+  lede:'Land development works for the S.S. Power Plant at Gandamara, Banshkhali, Chattogram. Total volume 7,052,000 cubic metres.',
+  gallery:['images/projects/09-a.jpg'], docs:[]},
+
+ {cover:'images/projects/10.jpg',
+  title:'Dhaka to Chittagong Highway 4-Laning, Package C-07',
+  client:'Spectra Engineers Ltd',
+  value:'Approx Tk 40 crore of a Tk 475 crore project',
+  period:'Completed', ref:'Contractor certificate',
+  lede:'Civil works on package C-07 of the four-laning of the Dhaka to Chittagong Highway, delivered as a sub-contractor to Spectra Engineers Ltd.',
+  gallery:['images/projects/10-a.jpg'], docs:[]},
+
+ {cover:actImg(11),
+  title:'GPH Ispat Civil and General Construction Works',
+  client:'GPH Ispat Ltd and GPH Power Generation Ltd',
+  value:'Tk 16 crore to Tk 25 crore of a Tk 200 crore project',
+  period:'Completed', ref:'Client letter, 21.08.2014',
+  lede:'Civil and general construction works for GPH Ispat Ltd and GPH Power Generation Ltd. The client certified the works as executed accurately and on schedule.',
+  gallery:[actImg(11)], docs:[]},
+
+ {cover:actImg(7),
+  title:'NRA RCC Road and Drains, West of X-Y Shed',
+  client:'Chittagong Port Authority',
+  value:'Tk 15.09 crore  (final bill Tk 15,09,45,833.49)',
+  period:'Jul 2022 to Jan 2023', ref:'Completion certificate, rated Satisfactory',
+  lede:'Construction of an RCC road with RCC drains to both sides, west of X-Y Shed, and the cross road at NRA. Completed within the 365 days allowed.',
+  gallery:[actImg(7)], docs:[]},
+
+ {cover:'images/projects/13.jpg',
+  title:'Maintenance Dredging, TSP Jetty to Dolphin Jetty-5',
+  client:'Chittagong Port Authority',
+  value:'Tk 14.00 crore  (Tk 14,00,29,850)',
+  period:'Contract dated Jan 2022', ref:'Agreement 19/2022, Tender ID 616502',
+  method:'Cutter suction, 302,000 m\u00b3',
+  lede:'Maintenance dredging in the Karnaphuli River opposite the TSP jetty through to Dolphin oil jetty-5, cutting bend zone A, within port limits. Dredging quantity 302,000 cubic metres.',
+  gallery:['images/projects/13-a.jpg','images/projects/13-b.jpg'], docs:[]},
+
+ {cover:'images/projects/14.jpg',
+  title:'Walkway and Beautification, Noakhali Government Residential Quarters',
+  client:'PWD Division, Noakhali',
+  value:'Tk 12.85 crore  (Tk 12,85,46,316.43)',
+  period:'Completed', ref:'To be confirmed',
+  method:'Walkway, beautification and landscaping',
+  lede:'Construction of a walkway and beautification works around the ponds at the Noakhali Government Residential Quarters.',
+  gallery:['images/projects/14-a.jpg'], docs:[]},
+
+ {cover:'images/projects/15.jpg',
+  title:'Maintenance Dredging, Upstream of Shah Amanat Bridge',
+  client:'Chittagong Port Authority',
+  value:'Tk 6.30 crore  (Tk 6,29,84,651.20)',
+  period:'Contract dated 22.10.2023', ref:'Agreement 05/2023, Tender ID 816620',
+  method:'171,200 m\u00b3',
+  lede:'Maintenance dredging upstream of the Shah Amanat Bridge on the north side of Bakalia Char. Dredging quantity 171,200 cubic metres.',
+  gallery:['images/projects/15-a.jpg'], docs:[]}
+);
+
+/* ---- EXECUTIVE LEADERSHIP: five, in order ----
+   Add a name once you have it and it appears above the position.
+   Photos go in images/leadership/ as 01.jpg to 05.jpg, portrait
+   orientation, ideally 3:4 (for example 900 x 1200). */
+var LEADERS = [
+  {photo:'images/leadership/01.jpg', name:'', role:'Chairman'},
+  {photo:'images/leadership/02.jpg', name:'', role:'Managing Director & CEO'},
+  {photo:'images/leadership/03.jpg', name:'', role:'Director of Operations'},
+  {photo:'images/leadership/04.jpg', name:'', role:'Director of Partnerships & Communications'},
+  {photo:'images/leadership/05.jpg', name:'', role:'Technical Director'}
+];
+
+/* ---- 4. ON-GOING PROJECTS: three ----
+   Same shape as PROJECTS. Fill these in as the records arrive. */
+var ONGOING = [
+ {cover:'images/ongoing/01.jpg',
+  title:'Chittagong Port Dredging Work',
+  client:'Client / awarding body', value:'Contract value', period:'Commenced', ref:'Contract reference',
+  lede:'Awaiting the project record: awarding body, scope of works, contract value, commencement date and expected completion.',
+  gallery:['images/ongoing/01-a.jpg'], docs:[]},
+
+ {cover:'images/ongoing/02.jpg',
+  title:'Construction Work in Border Area',
+  client:'Client / awarding body', value:'Contract value', period:'Commenced', ref:'Contract reference',
+  lede:'Awaiting the project record: awarding body, scope of works, contract value, commencement date and expected completion.',
+  gallery:['images/ongoing/02-a.jpg'], docs:[]},
+
+ {cover:'images/ongoing/03.jpg',
+  title:'Mirsarai Sand Filling Work',
+  client:'Client / awarding body', value:'Contract value', period:'Commenced', ref:'Contract reference',
+  lede:'Awaiting the project record: awarding body, scope of works, contract value, commencement date and expected completion.',
+  gallery:['images/ongoing/03-a.jpg'], docs:[]}
+];
+
+/* ---- 5. WORKING PARTNERS: fifteen, in the order supplied ---- */
+var PARTNERS = [
+  {img:'images/partners/01.png', name:'Bangladesh Army'},
+  {img:'images/partners/02.png', name:'Bangladesh Navy'},
+  {img:'images/partners/03.png', name:'Bangladesh Cadet Colleges Authority'},
+  {img:'images/partners/04.png', name:'Dhaka South City Corporation'},
+  {img:'images/partners/05.png', name:'Chattogram City Corporation'},
+  {img:'images/partners/06.png', name:'Cox\u2019s Bazar Development Authority'},
+  {img:'images/partners/07.png', name:'Bangladesh Inland Water Transport Authority'},
+  {img:'images/partners/08.png', name:'Bangladesh Water Development Board'},
+  {img:'images/partners/09.png', name:'Ministry of Education'},
+  {img:'images/partners/10.png', name:'Bangladesh Post Office'},
+  {img:'images/partners/11.png', name:'Bangladesh Police'},
+  {img:'images/partners/12.png', name:'ICT Division'},
+  {img:'images/partners/13.png', name:'Chittagong Port Authority'},
+  {img:'images/partners/14.png', name:'Bangladesh Coast Guard'},
+  {img:'images/partners/15.png', name:'Bangladesh Investment Development Authority'}
+];
+
+/* =================================================================
+   BUILD
+   ================================================================= */
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function plate(seed, w, h){
+    var tints = ['#17356E','#123056','#1B3E72','#0F2A4E','#1D4478'];
+    var bg = tints[Math.abs(seed) % tints.length];
+    var s = '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none"><rect width="'+w+'" height="'+h+'" fill="'+bg+'"></rect><g fill="none" stroke="#3D6FA8" stroke-width="1.2" opacity=".6">';
+    for (var y = h*0.42; y < h; y += h*0.11){
+      s += '<path d="M0 '+y.toFixed(0)+'q'+(w/4).toFixed(0)+' '+(h*0.06).toFixed(0)+' '+(w/2).toFixed(0)+' 0t'+(w/2).toFixed(0)+' 0"></path>';
+    }
+    return s + '</g></svg>';
+  }
+
+  function fill(el, src, alt, seed, w, h){
+    el.insertAdjacentHTML('afterbegin', plate(seed, w, h));
+    var ph = el.firstElementChild;              // the placeholder plate
+    var im = new Image();
+    im.alt = alt || '';
+    im.onload = function(){
+      if (ph && ph.parentNode) ph.parentNode.removeChild(ph);
+      el.insertBefore(im, el.firstChild);       // keep any chip already on the card
+    };
+    im.onerror = function(){ /* keep the placeholder plate */ };
+    im.src = src;
+  }
+
+  /* ---------------- HERO ---------------- */
+  var slidesWrap = document.getElementById('slides');
+  var dotsWrap   = document.getElementById('heroDots');
+
+  HERO.forEach(function(h, k){
+    var s = document.createElement('div');
+    s.className = 'slide' + (k === 0 ? ' is-on' : '');
+    s.innerHTML =
+      '<div class="still"><img src="' + h.still + '" alt=""></div>' +
+      '<video muted playsinline preload="metadata">' +
+        '<source src="' + h.file + '" type="video/mp4"></video>' +
+      '<div class="scrim"></div>';
+    var vid = s.querySelector('video');
+    vid.addEventListener('loadeddata', function(){ vid.classList.add('ready'); });
+    slidesWrap.appendChild(s);
+
+    var b = document.createElement('button');
+    b.setAttribute('role','tab');
+    b.setAttribute('aria-selected', k === 0 ? 'true' : 'false');
+    b.setAttribute('aria-label','Slide ' + (k+1));
+    b.addEventListener('click', function(){ heroGo(k); heroStart(); });
+    dotsWrap.appendChild(b);
+  });
+
+  /* HERO SPEED: milliseconds each slide is held. If you change this, change
+     the 2s in ".dots button[aria-selected=true]::after" to match. */
+  var HERO_HOLD = 1500;
+
+  var slides = [].slice.call(slidesWrap.children);
+  var hDots  = [].slice.call(dotsWrap.children);
+  var hi = 0, hTimer = null;
+
+  function heroGo(n){
+    hi = (n + slides.length) % slides.length;
+    slides.forEach(function(s,k){
+      s.classList.toggle('is-on', k === hi);
+      var v = s.querySelector('video');
+      if (!v) return;
+      if (k === hi){ var pr = v.play(); if (pr && pr.catch) pr.catch(function(){}); }
+      else { v.pause(); }
+    });
+    hDots.forEach(function(d,k){ d.setAttribute('aria-selected', k === hi ? 'true':'false'); });
+    document.getElementById('heroEyebrow').textContent = HERO[hi].eyebrow;
+    document.getElementById('heroTitle').textContent   = HERO[hi].title;
+    document.getElementById('heroSub').textContent     = HERO[hi].sub;
+  }
+  function heroStart(){ if (reduce) return; heroStop(); hTimer = setInterval(function(){ heroGo(hi+1); }, HERO_HOLD); }
+  function heroStop(){ if (hTimer) clearInterval(hTimer); }
+
+  heroGo(0); heroStart();
+
+  /* ---------------- CORE ACTIVITIES ---------------- */
+  var track = document.getElementById('actTrack');
+  var cDots = document.getElementById('actDots');
+  var N = ACTIVITIES.length;
+
+  /* two passes of the list, so stepping right never runs out of cards */
+  for (var pass = 0; pass < 2; pass++){
+    ACTIVITIES.forEach(function(name, k){
+      var num = (k+1) < 10 ? '0'+(k+1) : ''+(k+1);
+      var a = document.createElement('a');
+      a.className = 'card';
+      a.href = '#';
+      var sh = document.createElement('div');
+      sh.className = 'shot';
+      fill(sh, 'images/activities/' + num + '.jpg', name, k, 640, 400);
+      a.appendChild(sh);
+      var cap = document.createElement('div');
+      cap.className = 'cap';
+      cap.textContent = name;
+      a.appendChild(cap);
+      track.appendChild(a);
+    });
+  }
+  var cards = [].slice.call(track.children);
+
+  for (var d = 0; d < N; d++){
+    (function(d){
+      var b = document.createElement('button');
+      b.setAttribute('role','tab');
+      b.setAttribute('aria-selected', d === 0 ? 'true':'false');
+      b.setAttribute('aria-label','Activity ' + (d+1));
+      b.addEventListener('click', function(){ actGo(d); });
+      cDots.appendChild(b);
+    })(d);
+  }
+  var aDots = [].slice.call(cDots.children);
+  var ai = 0;
+
+  function actGo(n, instant){
+    ai = ((n % N) + N) % N;
+    if (instant) track.style.transition = 'none';
+    track.style.transform = 'translateX(' + (-cards[ai].offsetLeft) + 'px)';
+    if (instant){ void track.offsetWidth; track.style.transition = ''; }
+    aDots.forEach(function(x,k){ x.setAttribute('aria-selected', k === ai ? 'true':'false'); });
+  }
+  document.getElementById('actNext').addEventListener('click', function(){ actGo(ai+1); });
+  document.getElementById('actPrev').addEventListener('click', function(){ actGo(ai-1); });
+  addEventListener('resize', function(){ actGo(ai, true); });
+  actGo(0, true);
+
+  /* footer column, driven by the same array (the nav dropdown was removed) */
+  var footUl = document.getElementById('footActs');
+  ACTIVITIES.slice(0, 6).forEach(function(name){
+    var li = document.createElement('li');
+    li.innerHTML = '<a href="#activities">' + name + '</a>';
+    footUl.appendChild(li);
+  });
+
+  /* ---------------- MOBILE MENU ---------------- */
+  var burger = document.getElementById('burger');
+  var mob    = document.getElementById('mobileNav');
+  [['Home','#'],['About Us','about.html'],
+   ['Core Activities','#activities'],['Fleet & Equipment','fleet.html'],
+   ['Completed Projects','#projects','sub'],['On-going Projects','#ongoing','sub'],
+   ['Executive Leadership','#leadership'],['Licences','certifications.html'],
+   ['Working Partners','#partners'],
+   ['Company','#'],['Contact Us','#']].forEach(function(item){
+    var a = document.createElement('a');
+    a.href = item[1];
+    a.textContent = item[0];
+    if (item[2]) a.className = 'sub';
+    a.addEventListener('click', function(){ setMenu(false); });
+    mob.appendChild(a);
+  });
+  function setMenu(open){
+    mob.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function(){
+    setMenu(!mob.classList.contains('is-open'));
+  });
+  addEventListener('keydown', function(e){ if (e.key === 'Escape') setMenu(false); });
+  addEventListener('resize', function(){ if (innerWidth > 1080) setMenu(false); });
+
+  /* ---------------- EXECUTIVE LEADERSHIP ---------------- */
+  /* portrait placeholder, shown until a real photograph is dropped in */
+  function portrait(seed){
+    var tints = ['#16315B','#12294C','#1A3A69','#0F2445','#1D3F72'];
+    var bg = tints[Math.abs(seed) % tints.length];
+    return '<svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">' +
+      '<rect width="300" height="400" fill="' + bg + '"></rect>' +
+      '<g fill="#ffffff" opacity=".13">' +
+        '<circle cx="150" cy="152" r="58"></circle>' +
+        '<path d="M32 400c0-70 53-127 118-127s118 57 118 127z"></path>' +
+      '</g></svg>';
+  }
+
+  var leaderGrid = document.getElementById('leaderGrid');
+  LEADERS.forEach(function(p, k){
+    var card = document.createElement('div');
+    card.className = 'leader';
+    var sh = document.createElement('div');
+    sh.className = 'shot';
+    sh.innerHTML = portrait(k);
+    var ph = sh.firstElementChild;
+    var im = new Image();
+    im.alt = p.name || p.role;
+    im.onload = function(){
+      if (ph && ph.parentNode) ph.parentNode.removeChild(ph);
+      sh.appendChild(im);
+    };
+    im.src = p.photo;
+    card.appendChild(sh);
+
+    var who = document.createElement('div');
+    who.className = 'who';
+    if (p.name){
+      var nm = document.createElement('div');
+      nm.className = 'nm'; nm.textContent = p.name;
+      who.appendChild(nm);
+    }
+    var rl = document.createElement('div');
+    rl.className = p.name ? 'role' : 'role lead'; rl.textContent = p.role;
+    who.appendChild(rl);
+    card.appendChild(who);
+    leaderGrid.appendChild(card);
+  });
+
+  /* ---------------- COMPLETED PROJECTS ---------------- */
+  function renderGrid(list, node, live){
+    list.forEach(function(pr, k){
+      var b = document.createElement('button');
+      b.className = 'proj';
+      b.type = 'button';
+      var sh = document.createElement('div');
+      sh.className = 'shot';
+      fill(sh, pr.cover, pr.title, k + (live ? 6 : 2), 640, 400);
+      if (live){
+        var chip = document.createElement('span');
+        chip.className = 'chip';
+        chip.textContent = 'On site';
+        sh.appendChild(chip);
+      }
+      b.appendChild(sh);
+      var h = document.createElement('h3'); h.textContent = pr.title;
+      var m = document.createElement('div'); m.className = 'meta';
+      var vague = ['To be confirmed','Client','Client / awarding body','Contract value','Period','Commenced'];
+      var bits = [];
+      if (vague.indexOf(pr.client) === -1) bits.push(pr.client);
+      else if (vague.indexOf(pr.value) === -1) bits.push(pr.value);
+      if (vague.indexOf(pr.period) === -1) bits.push(pr.period);
+      m.textContent = bits.join('  ·  ');
+      var more = document.createElement('span'); more.className = 'more';
+      more.innerHTML = (live ? 'View progress' : 'View project') +
+        ' <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 2l5 5-5 5"></path></svg>';
+      b.appendChild(h); b.appendChild(m); b.appendChild(more);
+      b.addEventListener('click', function(){ openProject(pr, live); });
+      node.appendChild(b);
+    });
+  }
+  renderGrid(PROJECTS, document.getElementById('projGrid'), false);
+  renderGrid(ONGOING,  document.getElementById('liveGrid'), true);
+
+  /* Completed Projects reveal: four rows of three to start, then two more
+     rows on each click of See more projects. */
+  var PER_ROW = 3, FIRST_ROWS = 4, STEP_ROWS = 2;
+  var projCards = [].slice.call(document.getElementById('projGrid').children);
+  var moreRow = document.getElementById('moreRow');
+  var moreBtn = document.getElementById('moreBtn');
+  var shown = Math.min(PER_ROW * FIRST_ROWS, projCards.length);
+
+  var START = shown;
+  function chevron(up){
+    return '<svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">' +
+           '<path d="' + (up ? 'M2 9l5-5 5 5' : 'M2 5l5 5 5-5') + '"></path></svg>';
+  }
+  function paintProjects(){
+    projCards.forEach(function(c, i){ c.classList.toggle('is-hidden', i >= shown); });
+    var left = projCards.length - shown;
+    moreRow.hidden = false;
+    moreBtn.innerHTML = left > 0
+      ? 'See more projects <span class="n">' + left + ' more</span>' + chevron(false)
+      : 'See fewer projects' + chevron(true);
+  }
+  moreBtn.addEventListener('click', function(){
+    if (shown >= projCards.length){
+      shown = START;
+      paintProjects();
+      document.getElementById('projects').scrollIntoView({behavior:'smooth', block:'start'});
+    } else {
+      var firstNew = projCards[shown];
+      shown = Math.min(shown + PER_ROW * STEP_ROWS, projCards.length);
+      paintProjects();
+      if (firstNew) firstNew.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+  });
+  paintProjects();
+
+  /* ---------------- WORKING PARTNERS ---------------- */
+  /* Two identical passes sit side by side and the track slides exactly one
+     pass width, so the loop repeats with no visible seam. Speed is the
+     animation duration in the CSS above. */
+  var pTrack = document.getElementById('pTrack');
+  for (var pass2 = 0; pass2 < 2; pass2++){
+    PARTNERS.forEach(function(pt, idx){
+      var card = document.createElement('div');
+      card.className = 'p-card';
+      if (pass2 === 1) card.setAttribute('aria-hidden','true');
+      var im = new Image();
+      im.src = pt.img; im.alt = pass2 === 0 ? pt.name : ''; im.loading = 'eager'; im.decoding = 'async';
+      card.appendChild(im);
+      var nm = document.createElement('div');
+      nm.className = 'nm';
+      nm.textContent = pt.name;
+      card.appendChild(nm);
+      pTrack.appendChild(card);
+    });
+  }
+  if (reduce) pTrack.style.animation = 'none';
+
+  /* ---------------- MODAL ---------------- */
+  var modal = document.getElementById('modal');
+  var lastFocus = null;
+
+  function openProject(pr, live){
+    var kk = 3;
+    var lbl = document.querySelector('.sheet-top .k');
+    lbl.textContent = live ? 'On-going Project' : 'Completed Project';
+    lbl.classList.toggle('live', !!live);
+    document.getElementById('mTitle').textContent = pr.title;
+
+    var facts = document.getElementById('mFacts');
+    facts.innerHTML = '';
+    [['Client / Awarding body',pr.client],['Contract value',pr.value],['Period',pr.period],
+     pr.method ? ['Method',pr.method] : ['Reference',pr.ref]]
+      .forEach(function(f){
+        var el = document.createElement('div');
+        el.innerHTML = '<div class="k">'+f[0]+'</div><div class="v">'+f[1]+'</div>';
+        facts.appendChild(el);
+      });
+
+    document.getElementById('mLede').textContent = pr.lede;
+
+    var g = document.getElementById('mGallery');
+    g.innerHTML = '';
+    pr.gallery.forEach(function(src, j){
+      var cell = document.createElement('div');
+      cell.className = 'g';
+      fill(cell, src, pr.title + ' photograph ' + (j+1), kk + j, 400, 300);
+      g.appendChild(cell);
+    });
+
+    var wrap = document.getElementById('mDocsWrap');
+    var dl = document.getElementById('mDocs');
+    dl.innerHTML = '';
+    if (!pr.docs || !pr.docs.length){
+      wrap.hidden = true;
+    } else {
+      wrap.hidden = false;
+      pr.docs.forEach(function(doc){
+        var a = document.createElement('a');
+        a.className = 'doc';
+        a.href = doc.file;
+        a.setAttribute('download','');
+        a.innerHTML =
+          '<span class="ic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">'+
+          '<path d="M9 1H4a1 1 0 00-1 1v12a1 1 0 001 1h8a1 1 0 001-1V5z"></path><path d="M9 1v4h4"></path></svg></span>'+
+          '<span class="nm">'+doc.name+'</span><span class="sz">'+doc.size+'</span>';
+        dl.appendChild(a);
+      });
+    }
+
+    lastFocus = document.activeElement;
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('.x').focus();
+    heroStop();
+  }
+
+  function closeProject(){
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+    heroStart();
+  }
+
+  modal.addEventListener('click', function(e){
+    if (e.target.hasAttribute('data-close')) closeProject();
+  });
+  addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeProject();
+  });
+})();
+</script>
+</body>
+</html>

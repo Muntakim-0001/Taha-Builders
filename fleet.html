@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fleet &amp; Equipment | Taha Builders</title>
+<meta name="description" content="Owned dredgers, excavators, boats, plant and site equipment operated by M/S Taha Builders.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="images/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="images/favicon-180.png">
+<link rel="stylesheet" href="site.css">
+<style>
+.pagehead{background:var(--navy-deep);color:#C7D6EA;padding:clamp(52px,7vw,84px) 0}
+.pagehead h1{color:#fff;font-size:clamp(30px,4.4vw,52px);font-weight:700;margin-top:12px}
+.pagehead p{max-width:60ch;margin-top:16px;font-size:clamp(15px,1.5vw,18px)}
+.crumb{font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
+.crumb a{color:var(--teal)}
+.crumb a:hover{color:#fff}
+.tally{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:52px}
+.tally div{background:#fff;padding:22px 20px}
+.tally .k{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.tally .v{font-family:var(--f-display);font-weight:700;font-size:30px;color:var(--navy);margin-top:8px;letter-spacing:-.02em}
+.eqgrid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.eq{background:#fff;padding:26px 22px;display:flex;flex-direction:column;gap:16px;transition:background .18s;
+  border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.eq:hover{background:var(--paper-2)}
+.eq-ic{color:var(--cyan-dark);height:62px}
+.eq-ic svg{height:62px;width:auto}
+.eq h3{font-size:16px;font-weight:600;line-height:1.35}
+.eq-q{margin-top:auto;padding-top:12px;border-top:1px solid var(--paper-2);font-size:13.5px;color:var(--muted)}
+.eq-q span{font-family:var(--f-display);font-weight:700;font-size:20px;color:var(--navy);margin-right:5px}
+.tablewrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:20px}
+table.eqt{width:100%;border-collapse:collapse;font-size:14.5px}
+table.eqt th{background:var(--navy);color:#fff;text-align:left;padding:12px 14px;font-size:11px;
+  font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+table.eqt td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--body)}
+table.eqt tr:nth-child(even) td{background:var(--paper-2)}
+table.eqt td.num,table.eqt th.num{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink);font-weight:500}
+table.eqt td:first-child{color:var(--muted);width:44px}
+.note{margin-top:40px;padding:20px 22px;border-left:3px solid var(--cyan);background:var(--paper-2);
+  font-size:14.5px;color:var(--body);max-width:76ch}
+@media(max-width:1080px){.eqgrid{grid-template-columns:repeat(2,1fr)}.tally{grid-template-columns:repeat(2,1fr)}.tablewrap{grid-template-columns:1fr;gap:0}}
+@media(max-width:680px){.eqgrid{grid-template-columns:1fr}.tally{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Taha Builders home">
+      <img class="mark" src="images/logo-mark.svg" alt="" width="46" height="46">
+      <span class="wordmark">TAHA BUILDERS<span class="tag">Dredging &amp; Construction</span></span>
+    </a>
+
+    <ul class="nav">
+      <li><a class="top" href="index.html">Home</a></li>
+      <li><a class="top" href="index.html#activities">Core Activities</a></li>
+      <li><a class="top" href="fleet.html">Our Fleet</a></li>
+      <li><a class="top" href="index.html#projects">Projects
+        <svg class="caret" viewBox="0 0 10 10"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg></a>
+        <ul class="drop">
+          <li><a href="index.html#projects">Completed Projects</a></li>
+          <li><a href="index.html#ongoing">On-going Projects</a></li>
+        </ul>
+      </li>
+      <li><a class="top" href="#">Company
+        <svg class="caret" viewBox="0 0 10 10"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg></a>
+        <ul class="drop">
+          <li><a href="about.html">About Us</a></li><li><a href="#">Leadership</a></li>
+          <li><a href="certifications.html">Licences</a></li>
+          <li><a href="#">HSE &amp; Quality</a></li>
+          <li><a href="#">Sustainability</a></li>
+        </ul>
+      </li>
+      <li><a class="top" href="#">Contact Us</a></li>
+    </ul>
+
+    <div class="icons">
+      <a href="#" aria-label="Client portal"><svg width="19" height="19" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="7" r="3.2"></circle><path d="M3.5 17c1.1-3.2 3.5-4.8 6.5-4.8s5.4 1.6 6.5 4.8"></path></svg></a>
+      <a href="#" aria-label="LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21H17.6v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.46-2.2 2.97V21H9z"></path></svg></a>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="mobile" id="mobileNav" aria-label="Mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="index.html#activities">Core Activities</a>
+  <a href="fleet.html">Fleet &amp; Equipment</a>
+  <a href="index.html#projects" class="sub">Completed Projects</a>
+  <a href="index.html#ongoing" class="sub">On-going Projects</a>
+  <a href="index.html#leadership">Executive Leadership</a>
+  <a href="certifications.html">Licences</a>
+  <a href="index.html#partners">Working Partners</a>
+  <a href="#">Contact Us</a>
+</nav>
+
+
+<section class="pagehead">
+  <div class="wrap">
+    <p class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Fleet &amp; Equipment</p>
+    <h1>Fleet &amp; Equipment</h1>
+    <p>Taha Builders owns and operates its own plant. Mobilisation dates are ours to control and production rates are ours to commit to, rather than depending on hired equipment.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="tally">
+      <div><div class="k">Dredgers</div><div class="v">2</div></div>
+      <div><div class="k">Excavators</div><div class="v">50</div></div>
+      <div><div class="k">Boats &amp; work craft</div><div class="v">4</div></div>
+      <div><div class="k">Generators</div><div class="v">6</div></div>
+    </div>
+
+    <div class="center-head" style="margin-bottom:36px">
+      <h2>Major Equipment</h2>
+      <p class="sub">Owned plant available for immediate mobilisation.</p>
+    </div>
+    <div class="eqgrid">
+<article class="eq"><div class="eq-ic"><svg viewBox="0 0 64 60" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 40h52"/><path d="M14 40l4-10h28l4 10"/><path d="M30 30V16h10v14"/><path d="M46 34l12 10"/><circle cx="59" cy="45" r="3"/><path d="M4 48q8 4 16 0t16 0 16 0 16 0"/></svg></div><div class="eq-b"><h3>Dredger</h3><p class="eq-q"><span>2</span> units</p></div></article>
+<article class="eq"><div class="eq-ic"><svg viewBox="0 0 64 60" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 40h44l-6 10H16z"/><path d="M22 40V28h18v12"/><path d="M40 32h10v8"/><path d="M4 54q8 4 16 0t16 0 16 0 16 0"/></svg></div><div class="eq-b"><h3>Work Boat</h3><p class="eq-q"><span>2</span> units</p></div></article>
+<article class="eq"><div class="eq-ic"><svg viewBox="0 0 64 60" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 36h48l-7 12H15z"/><path d="M24 36v-6h14v6"/><path d="M4 54q8 4 16 0t16 0 16 0 16 0"/></svg></div><div class="eq-b"><h3>Fiber Boat</h3><p class="eq-q"><span>2</span> units</p></div></article>
+<article class="eq"><div class="eq-ic"><svg viewBox="0 0 64 60" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="40" width="28" height="8" rx="4"/><path d="M13 44h18"/><rect x="13" y="27" width="17" height="13" rx="2"/><path d="M30 31l15-10"/><path d="M45 21l4 4-8 12"/><path d="M37 33l9 5-3 8-8-3z"/></svg></div><div class="eq-b"><h3>Excavator</h3><p class="eq-q"><span>50</span> units</p></div></article>
+<article class="eq"><div class="eq-ic"><svg viewBox="0 0 64 60" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="44" r="7"/><circle cx="45" cy="44" r="7"/><rect x="27" y="24" width="19" height="15" rx="2"/><path d="M27 32L13 38"/><path d="M13 31v11H6"/></svg></div><div class="eq-b"><h3>Wheel Loader</h3><p class="eq-q"><span>4</span> units</p></div></article>
+<article class="eq"><div class="eq-ic"><svg viewBox="0 0 64 60" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 52h28"/><rect x="24" y="44" width="16" height="8"/><path d="M32 44V10"/><path d="M24 10h16"/><rect x="28" y="16" width="8" height="12"/></svg></div><div class="eq-b"><h3>Hydraulic Static Pile Driver</h3><p class="eq-q"><span>1</span> units</p></div></article>
+<article class="eq"><div class="eq-ic"><svg viewBox="0 0 64 60" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 12h16l-3 18h-10z"/><path d="M36 12h16l-3 18H39z"/><path d="M10 34h46v6H10z"/><path d="M20 40l4 10h18l4-10"/><path d="M8 52h50"/></svg></div><div class="eq-b"><h3>Concrete Batching Plant with pump &amp; pipe</h3><p class="eq-q"><span>1</span> units</p></div></article>
+<article class="eq"><div class="eq-ic"><svg viewBox="0 0 64 60" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 45h52"/><circle cx="15" cy="49" r="4"/><circle cx="45" cy="49" r="4"/><path d="M8 45V29h12v16"/><ellipse cx="39" cy="32" rx="14" ry="10"/><path d="M29 26l20 12M29 38l20-12"/></svg></div><div class="eq-b"><h3>RMC Transit Mixer Drum with Chassis</h3><p class="eq-q"><span>2</span> units</p></div></article>
+<article class="eq"><div class="eq-ic"><svg viewBox="0 0 64 60" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="30" width="16" height="12"/><circle cx="16" cy="48" r="6"/><circle cx="34" cy="49" r="4"/><path d="M28 34h10v12H28z"/><path d="M40 30h18v14H40z"/><circle cx="52" cy="48" r="4"/></svg></div><div class="eq-b"><h3>Tractor with Tipping Trailer</h3><p class="eq-q"><span>1</span> units</p></div></article>
+<article class="eq"><div class="eq-ic"><svg viewBox="0 0 64 60" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="22" width="44" height="24" rx="3"/><path d="M18 22v-6h12v6"/><path d="M20 32h10l-4 6h8"/><path d="M42 30v10M38 34h8"/><path d="M14 46v6M50 46v6"/></svg></div><div class="eq-b"><h3>Generator, 100 KVA</h3><p class="eq-q"><span>1</span> units</p></div></article>
+<article class="eq"><div class="eq-ic"><svg viewBox="0 0 64 60" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="22" width="44" height="24" rx="3"/><path d="M18 22v-6h12v6"/><path d="M20 32h10l-4 6h8"/><path d="M42 30v10M38 34h8"/><path d="M14 46v6M50 46v6"/></svg></div><div class="eq-b"><h3>Generator, 50 KW / 62.5 KVA</h3><p class="eq-q"><span>2</span> units</p></div></article>
+<article class="eq"><div class="eq-ic"><svg viewBox="0 0 64 60" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="22" width="44" height="24" rx="3"/><path d="M18 22v-6h12v6"/><path d="M20 32h10l-4 6h8"/><path d="M42 30v10M38 34h8"/><path d="M14 46v6M50 46v6"/></svg></div><div class="eq-b"><h3>Generator, 20 KW</h3><p class="eq-q"><span>2</span> units</p></div></article>
+<article class="eq"><div class="eq-ic"><svg viewBox="0 0 64 60" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="22" width="44" height="24" rx="3"/><path d="M18 22v-6h12v6"/><path d="M20 32h10l-4 6h8"/><path d="M42 30v10M38 34h8"/><path d="M14 46v6M50 46v6"/></svg></div><div class="eq-b"><h3>Generator, 5 KVA</h3><p class="eq-q"><span>1</span> units</p></div></article>
+<article class="eq"><div class="eq-ic"><svg viewBox="0 0 64 60" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="15" cy="42" r="9"/><circle cx="48" cy="42" r="9"/><path d="M15 42l9-14h13l11 14"/><path d="M24 28h13"/><path d="M37 28l3-7h7"/><path d="M27 42h12"/></svg></div><div class="eq-b"><h3>Motor Cycle, Honda Dream Neo 110 CC</h3><p class="eq-q"><span>6</span> units</p></div></article>
+    </div>
+
+    <div class="center-head" style="margin:72px auto 0">
+      <h2>Other Equipment</h2>
+      <p class="sub">Supporting plant, formwork and site tooling.</p>
+    </div>
+    <div class="tablewrap">
+      <table class="eqt"><thead><tr><th>S/N</th><th>Equipment</th><th>Unit</th><th class="num">Quantity</th></tr></thead><tbody>
+<tr><td>1</td><td>Vibrator Machine (Diesel)</td><td>Nos</td><td class="num">6</td></tr>
+<tr><td>2</td><td>Vibrator Nozzle, 38 mm</td><td>Nos</td><td class="num">38</td></tr>
+<tr><td>3</td><td>Vibrator Nozzle, 50 mm</td><td>Nos</td><td class="num">60</td></tr>
+<tr><td>4</td><td>Rod Cutter Machine</td><td>Nos</td><td class="num">1</td></tr>
+<tr><td>5</td><td>Thai Cutter Machine</td><td>Nos</td><td class="num">1</td></tr>
+<tr><td>6</td><td>Welding Machine</td><td>Nos</td><td class="num">92</td></tr>
+<tr><td>7</td><td>Mud Pump, 2 HP</td><td>Nos</td><td class="num">18</td></tr>
+<tr><td>8</td><td>Mud Pump, 3 HP</td><td>Nos</td><td class="num">9</td></tr>
+<tr><td>9</td><td>Water Pump, 1 HP</td><td>Nos</td><td class="num">30</td></tr>
+<tr><td>10</td><td>Water Pump, 1.5 HP</td><td>Nos</td><td class="num">42</td></tr>
+<tr><td>11</td><td>Water Pump, 7.5 HP</td><td>Nos</td><td class="num">4</td></tr>
+<tr><td>12</td><td>Z-Pump, 1 HP</td><td>Nos</td><td class="num">18</td></tr>
+<tr><td>13</td><td>Submersible Pump, 1 HP</td><td>Nos</td><td class="num">33</td></tr>
+<tr><td>14</td><td>Cutting Machine, 4 inch</td><td>Nos</td><td class="num">28</td></tr>
+<tr><td>15</td><td>Cutting Machine, 7 inch</td><td>Nos</td><td class="num">35</td></tr>
+      </tbody></table>
+      <table class="eqt"><thead><tr><th>S/N</th><th>Equipment</th><th>Unit</th><th class="num">Quantity</th></tr></thead><tbody>
+<tr><td>16</td><td>Grinding Machine, 4 inch</td><td>Nos</td><td class="num">88</td></tr>
+<tr><td>17</td><td>Grinding Machine, 7 inch</td><td>Nos</td><td class="num">76</td></tr>
+<tr><td>18</td><td>Drill Machine</td><td>Nos</td><td class="num">32</td></tr>
+<tr><td>19</td><td>Water Pump (various HP)</td><td>Nos</td><td class="num">88</td></tr>
+<tr><td>20</td><td>Rope Hoist Set</td><td>Nos</td><td class="num">21</td></tr>
+<tr><td>21</td><td>Steel Shutter</td><td>Sft</td><td class="num">12,000</td></tr>
+<tr><td>22</td><td>Hollow Box, 3 x 3 inch</td><td>Rft</td><td class="num">80,000</td></tr>
+<tr><td>23</td><td>Hollow Box, 1.5 x 1.5 inch</td><td>Rft</td><td class="num">32,000</td></tr>
+<tr><td>24</td><td>MS Pipe, 2/3 inch dia</td><td>Rft</td><td class="num">26,000</td></tr>
+<tr><td>25</td><td>MS Props</td><td>Pcs</td><td class="num">32,000</td></tr>
+<tr><td>26</td><td>U-Head</td><td>Pcs</td><td class="num">6,500</td></tr>
+<tr><td>27</td><td>Plain Sheet</td><td>Pcs</td><td class="num">18,000</td></tr>
+<tr><td>28</td><td>Quick Lock Scaffolding</td><td>Pcs</td><td class="num">28,000</td></tr>
+<tr><td>29</td><td>Scaffolding Set</td><td>Set</td><td class="num">12,000</td></tr>
+      </tbody></table>
+    </div>
+
+    <p class="note"><strong>Photographs.</strong> The tiles above use drawn schematics rather than photographs. Replace any of them with a real picture of that machine on a Taha site, and the page will be far stronger for it, because a tender evaluator wants to see the plant that will actually turn up.</p>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="images/logo-mark-reversed.svg" alt="" width="54" height="54" style="margin-bottom:18px">
+        <span class="wordmark">TAHA BUILDERS<span class="tag">Dredging &amp; Construction</span></span>
+        <p><span data-slot>One-line description of Taha Builders, to be supplied.</span></p>
+      </div>
+      <div><h4>Core Activities</h4><ul><li><a href="index.html#activities">Capital Dredging</a></li><li><a href="index.html#activities">Offshore Pipeline Trenching</a></li><li><a href="index.html#activities">Maintenance Dredging</a></li><li><a href="index.html#activities">River Dredging for River Navigational Channels</a></li><li><a href="index.html#activities">Land Reclamation</a></li><li><a href="index.html#activities">Sand Mining</a></li></ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="about.html">About Us</a></li><li><a href="#">Leadership</a></li>
+        <li><a href="certifications.html">Licences</a></li><li><a href="#">HSE &amp; Quality</a></li>
+        <li><a href="#">Sustainability</a></li></ul></div>
+      <div><h4>Connect</h4><ul>
+        <li><a href="index.html#projects">Completed Projects</a></li><li><a href="index.html#ongoing">On-going Projects</a></li>
+        <li><a href="fleet.html">Our Fleet</a></li><li><a href="#">Newsroom</a></li>
+        <li><a href="#">Careers</a></li><li><a href="#">Contact Us</a></li></ul></div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; <span data-slot>YEAR</span> <span data-slot>REGISTERED COMPANY NAME</span>. All rights reserved.</span>
+      <span>Privacy Policy &nbsp;&middot;&nbsp; Terms</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var burger = document.getElementById('burger');
+  var mob = document.getElementById('mobileNav');
+  if (!burger || !mob) return;
+  function setMenu(open){
+    mob.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function(){ setMenu(!mob.classList.contains('is-open')); });
+  mob.addEventListener('click', function(e){ if (e.target.tagName === 'A') setMenu(false); });
+  addEventListener('keydown', function(e){ if (e.key === 'Escape') setMenu(false); });
+  addEventListener('resize', function(){ if (innerWidth > 1080) setMenu(false); });
+})();
+</script>
+
+</body>
+</html>
