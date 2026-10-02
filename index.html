@@ -113,8 +113,11 @@
       <li><a class="top" href="about.html">Company
         <svg class="caret" viewBox="0 0 10 10"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg></a>
         <ul class="drop">
-          <li><a href="about.html">About Us</a></li><li><a href="#leadership">Leadership</a></li>
-          <li><a href="certifications.html">Licences</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="about.html#leadership">Leadership</a></li>
+          <li><a href="certifications.html">Licences &amp; Certifications</a></li>
+          <li><a href="hse-quality.html">HSE &amp; Quality</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
         </ul>
       </li>
       <li><a class="top" href="about.html#office">Contact Us</a></li>
@@ -654,9 +657,10 @@ var PARTNERS = [
   [['Home','/'],['About Us','about.html'],
    ['Core Activities','#activities'],['Fleet & Equipment','fleet.html'],
    ['Completed Projects','#projects','sub'],['On-going Projects','#ongoing','sub'],
-   ['Executive Leadership','#leadership'],['Licences','certifications.html'],
+   ['Executive Leadership','about.html#leadership'],['Licences & Certifications','certifications.html'],
+   ['HSE & Quality','hse-quality.html'],['Sustainability','sustainability.html'],
    ['Working Partners','#partners'],
-   ['Company','about.html'],['Contact Us','about.html#office']].forEach(function(item){
+   ['Contact Us','about.html#office']].forEach(function(item){
     var a = document.createElement('a');
     a.href = item[1];
     a.textContent = item[0];
