@@ -143,16 +143,17 @@ button{font:inherit}
 .pill:hover{background:var(--cyan-dark)}
 
 /* ---------- executive leadership ---------- */
-.leaders{display:grid;grid-template-columns:repeat(5,1fr);gap:28px 24px}
-.leader{display:flex;flex-direction:column;gap:16px}
-.leader .shot{aspect-ratio:3/4;background:var(--navy)}
+.leaders{display:grid;grid-template-columns:repeat(4,1fr);gap:32px 28px}
+.leader{display:flex;flex-direction:column;gap:16px;background:#fff;padding:16px;border-radius:12px;border:1px solid var(--line);box-shadow:0 6px 18px rgba(11,33,67,0.06);transition:transform .3s ease,box-shadow .3s ease}
+.leader:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(11,33,67,0.14);border-color:var(--cyan)}
+.leader .shot{aspect-ratio:3/4;background:var(--navy-deep);border-radius:8px;overflow:hidden}
 .leader .shot img,.leader .shot svg{width:100%;height:100%;object-fit:cover;display:block;
   transition:transform .6s cubic-bezier(.2,.6,.2,1)}
-.leader:hover .shot img,.leader:hover .shot svg{transform:scale(1.09)}
-.leader .who{display:flex;flex-direction:column;gap:7px}
-.leader .who::before{content:"";width:26px;height:2px;background:var(--cyan);margin-bottom:3px}
-.leader .nm{font-family:var(--f-display);font-weight:700;font-size:18px;color:var(--navy);line-height:1.25;letter-spacing:-.01em}
-.leader .role{font-size:14.5px;color:var(--muted);line-height:1.45}
+.leader:hover .shot img,.leader:hover .shot svg{transform:scale(1.06)}
+.leader .who{display:flex;flex-direction:column;gap:6px;padding-top:4px}
+.leader .who::before{content:"";width:34px;height:3px;background:var(--cyan);margin-bottom:4px;border-radius:2px}
+.leader .nm{font-family:var(--f-display);font-weight:700;font-size:19px;color:var(--navy);line-height:1.25;letter-spacing:-.01em}
+.leader .role{font-size:14px;color:var(--cyan-dark);font-weight:600;line-height:1.45}
 /* no name yet, so the position carries the card */
 .leader .role.lead{font-family:var(--f-display);font-weight:700;font-size:17.5px;color:var(--navy);
   line-height:1.28;letter-spacing:-.01em;text-wrap:balance}
