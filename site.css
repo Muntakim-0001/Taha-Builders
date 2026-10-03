@@ -34,6 +34,7 @@
   --line:#DFE5E9;
   --paper:#FFFFFF;
   --paper-2:#F4F7F9;
+  --taha-green:#0A4A3B;
 
   /* Inter Tight for display, Inter for text. One neutral grotesque family
      throughout, the way the ECC site is set. --f-mono is Inter as well, so
@@ -63,8 +64,6 @@ button{font:inherit}
 .brand{display:flex;align-items:center;gap:14px;flex:none}
 .mark{height:58px;width:auto;max-height:64px;object-fit:contain;flex:none;transition:transform .2s ease}
 .brand:hover .mark{transform:scale(1.02)}
-.wordmark{font-family:var(--f-display);font-weight:700;font-size:21px;line-height:1;color:var(--navy);letter-spacing:-.01em;display:block}
-.wordmark .tag{display:block;font-family:var(--f-body);font-weight:600;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan-dark);margin-top:6px;padding-top:6px;border-top:1px solid var(--line)}
 
 .nav{margin-left:auto;display:flex;align-items:center;gap:1px;list-style:none;padding:0;margin-block:0}
 .nav > li{position:relative}
@@ -184,6 +183,25 @@ button{font:inherit}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
 .sheet-top .k.live{color:var(--teal)}
 
+/* contract value badge — shown directly on card image */
+.val-badge{
+  position:absolute;
+  bottom:0;
+  left:0;
+  z-index:2;
+  background:var(--navy-deep);
+  color:#fff;
+  font-family:var(--f-display);
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.02em;
+  padding:6px 14px 7px;
+  border-top-right-radius:4px;
+  white-space:nowrap;
+  backdrop-filter:blur(4px);
+}
+
+
 .partners{background:#fff}
 .p-rail{overflow:hidden;position:relative}
 /* soft fade at both edges so logos enter and leave the row instead of popping */
@@ -236,8 +254,6 @@ button{font:inherit}
 .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:44px;padding-bottom:44px}
 .footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
 .footer a:hover{color:#fff}
-.foot-brand .wordmark{color:#fff}
-.foot-brand .wordmark .tag{color:var(--teal);border-top-color:#22406E}
 .foot-brand p{margin-top:16px;max-width:34ch;line-height:1.7}
 .foot-bar{border-top:1px solid #25406E;padding:20px 0;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-family:var(--f-mono);font-size:11px;color:#6B7FA3}
 
@@ -245,7 +261,6 @@ button{font:inherit}
 @media(max-width:1080px){
   .p-card{flex:0 0 200px}
   .leaders{grid-template-columns:repeat(2,1fr)}
-  .record-grid{grid-template-columns:repeat(2,1fr)!important}
   .nav,.icons{display:none}
   .burger{display:block}
   .card{flex:0 0 calc((100% - 24px)/2)}
@@ -258,7 +273,6 @@ button{font:inherit}
   .p-card{flex:0 0 164px}
   .p-card img{height:70px}
   .leaders{grid-template-columns:1fr;gap:24px 16px}
-  .record-grid{grid-template-columns:1fr!important}
   .hero{height:auto;aspect-ratio:4/5;max-height:78vh;min-height:0}
   .hero-copy{bottom:118px}
   .card{flex:0 0 100%}
@@ -271,12 +285,18 @@ button{font:inherit}
   html{scroll-behavior:auto}
 }
 
+/* ---------- accessibility: skip link ---------- */
+.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:12px 24px;background:var(--navy);color:#fff;font-weight:600;font-size:15px;z-index:9999;border-bottom-right-radius:6px;outline:none}
+
+/* ---------- back to top button ---------- */
+.back-top{position:fixed;bottom:28px;right:24px;z-index:100;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:0;cursor:pointer;display:grid;place-items:center;box-shadow:0 4px 16px rgba(11,33,67,.28);opacity:0;transform:translateY(12px);transition:opacity .25s,transform .25s;pointer-events:none}
+.back-top.visible{opacity:1;transform:none;pointer-events:auto}
+.back-top:hover{background:var(--cyan-dark)}
+
 /* =============================================================
    TRACK-RECORD — clean white editorial redesign with TAHA watermark
    ============================================================= */
-
-/* Add brand green for watermark to :root -------------------- */
-:root{--taha-green:#0A4A3B}
 
 /* Container: four equal columns with subtle column dividers */
 .record-grid-clean{

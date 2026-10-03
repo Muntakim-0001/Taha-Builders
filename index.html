@@ -816,13 +816,19 @@ var PARTNERS = [
         chip.textContent = 'On site';
         sh.appendChild(chip);
       }
+      /* value badge — shown directly on the card image */
+      var vague = ['To be confirmed','Client','Client / awarding body','Contract value','Period','Commenced'];
+      if (!live && vague.indexOf(pr.value) === -1){
+        var badge = document.createElement('span');
+        badge.className = 'val-badge';
+        badge.textContent = pr.value;
+        sh.appendChild(badge);
+      }
       b.appendChild(sh);
       var h = document.createElement('h3'); h.textContent = pr.title;
       var m = document.createElement('div'); m.className = 'meta';
-      var vague = ['To be confirmed','Client','Client / awarding body','Contract value','Period','Commenced'];
       var bits = [];
       if (vague.indexOf(pr.client) === -1) bits.push(pr.client);
-      else if (vague.indexOf(pr.value) === -1) bits.push(pr.value);
       if (vague.indexOf(pr.period) === -1) bits.push(pr.period);
       m.textContent = bits.join('  ·  ');
       var more = document.createElement('span'); more.className = 'more';
