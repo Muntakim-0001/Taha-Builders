@@ -270,3 +270,112 @@ button{font:inherit}
   *{animation:none!important;transition-duration:.01ms!important}
   html{scroll-behavior:auto}
 }
+
+/* =============================================================
+   TRACK-RECORD — clean white editorial redesign with TAHA watermark
+   ============================================================= */
+
+/* Add brand green for watermark to :root -------------------- */
+:root{--taha-green:#0A4A3B}
+
+/* Container: four equal columns with subtle column dividers */
+.record-grid-clean{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  margin-top:8px;
+}
+
+/* Each column */
+.record-col{
+  position:relative;
+  overflow:hidden;
+  padding:40px 28px 44px;
+  background:#fff;
+  border-right:1px solid var(--line);
+}
+.record-col:last-child{border-right:none}
+
+/* Watermark letter — huge, ultra-light, behind everything */
+.col-watermark{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--f-display);
+  font-size:clamp(260px,26vw,380px);
+  font-weight:100;
+  line-height:1;
+  color:var(--taha-green);
+  opacity:.06;
+  user-select:none;
+  pointer-events:none;
+  letter-spacing:-.06em;
+  /* Push letter slightly upward so it peeks above the column */
+  transform:translateY(6%);
+}
+
+/* Coloured rule bar above each column's tag */
+.col-rule{
+  width:36px;
+  height:3px;
+  border-radius:2px;
+  margin-bottom:16px;
+}
+
+/* Discipline label */
+.col-tag{
+  font-family:var(--f-mono);
+  font-size:10.5px;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--cyan-dark);
+  margin-bottom:14px;
+  line-height:1.4;
+}
+
+/* Main amount figure */
+.col-amount{
+  font-family:var(--f-display);
+  font-size:clamp(26px,2.6vw,36px);
+  font-weight:800;
+  color:var(--navy);
+  line-height:1;
+  letter-spacing:-.025em;
+  margin-bottom:16px;
+}
+.col-unit{
+  font-size:16px;
+  font-weight:600;
+  color:var(--body);
+}
+
+/* Description */
+.col-desc{
+  font-size:13.5px;
+  color:var(--body);
+  line-height:1.6;
+}
+
+/* Content stacks above the watermark */
+.col-content{
+  position:relative;
+  z-index:1;
+}
+
+/* Responsive — stack to 2 cols on tablet, 1 on mobile */
+@media(max-width:900px){
+  .record-grid-clean{grid-template-columns:repeat(2,1fr)}
+  .record-col{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .record-col:nth-child(2n){border-right:none}
+  .col-watermark{font-size:clamp(180px,40vw,260px)}
+}
+@media(max-width:540px){
+  .record-grid-clean{grid-template-columns:1fr}
+  .record-col{border-right:none}
+  .col-watermark{font-size:clamp(200px,55vw,280px)}
+}
